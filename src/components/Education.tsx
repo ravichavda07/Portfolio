@@ -11,14 +11,17 @@ export default function Education() {
           <div className="border-l-4 border-purple-500 pl-6">
             <h3 className="text-2xl font-semibold text-white mb-2">Bachelor of Engineering</h3>
             <h4 className="text-xl text-purple-400 mb-2">Computer Engineering</h4>
-            <div className="flex items-center gap-2">
-                    <MapPin size={16} className="text-purple-400" />
-                    <span>V.V.P. Engineering College, Rajkot, Gujarat</span>
-            </div>
-            <div className="flex items-center gap-2">
+            
+            <div className="flex flex-col sm:flex-row gap-4 text-gray-300 mb-6">
+                    <div className="flex items-center gap-2">
+                      <MapPin size={16} className="text-purple-400" />
+                      <span>V.V.P. Engineering College, Rajkot, Gujarat</span>
+                    </div>
+                    <div className="flex items-center gap-2">
                       <Calendar size={16} className="text-purple-400" />
                       <span>2022 - 2026</span>
                     </div>
+                  </div>
             <a
               href="/resume.pdf"
               target="_blank"

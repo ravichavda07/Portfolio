@@ -1,19 +1,12 @@
 import { Github, ExternalLink } from 'lucide-react';
 
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  githubUrl: string;
-  liveUrl: string;
-}
-
 export default function Projects() {
-  const projects: Project[] = [
+  const projects = [
     {
       title: 'Analog Watch',
       description: 'Watch time in analog',
       image: 'https://images.unsplash.com/flagged/photo-1571827289865-19ebcc134002?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFuYWxvZyUyMGNsb2NrfGVufDB8fDB8fHww',
+      tech: ['HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://github.com/ravichavda07/Analog-Clock',
       liveUrl: 'http://analog-clock-three-omega.vercel.app',
     },
@@ -21,6 +14,7 @@ export default function Projects() {
       title: 'Calculator',
       description: 'Easy way to calculate any number',
       image: 'https://images.unsplash.com/photo-1636033503567-a59bff19d79a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      tech: ['HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://github.com/ravichavda07/Calculator-App',
       liveUrl: 'http://calculator-alpha-livid.vercel.app',
     },
@@ -39,6 +33,16 @@ export default function Projects() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex space-x-4 justify-end">
                   <a
                     href={project.githubUrl}
@@ -48,6 +52,7 @@ export default function Projects() {
                     title="View GitHub Repository"
                   >
                     <Github size={20} />
+                    <span className="text-sm font-medium">Code</span>
                   </a>
                   <a
                     href={project.liveUrl}
@@ -57,6 +62,7 @@ export default function Projects() {
                     title="View Live Demo"
                   >
                     <ExternalLink size={20} />
+                    <span className="text-sm font-medium">Live Demo</span>
                   </a>
                 </div>
               </div>

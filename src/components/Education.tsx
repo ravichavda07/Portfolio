@@ -1,4 +1,4 @@
-import { FileText } from 'lucide-react';
+import { FileText, Calendar, MapPin } from 'lucide-react';
 
 export default function Education() {
   return (
@@ -11,9 +11,14 @@ export default function Education() {
           <div className="border-l-4 border-purple-500 pl-6">
             <h3 className="text-2xl font-semibold text-white mb-2">Bachelor of Engineering</h3>
             <h4 className="text-xl text-purple-400 mb-2">Computer Engineering</h4>
-            <p className="text-gray-300 mb-2">V.V.P. Engineering College, Rajkot, Gujarat</p>
-            <p className="text-gray-400 mb-6">2022 - 2026</p>
-            
+            <div className="flex items-center gap-2">
+                    <MapPin size={16} className="text-purple-400" />
+                    <span>V.V.P. Engineering College, Rajkot, Gujarat</span>
+            </div>
+            <div className="flex items-center gap-2">
+                      <Calendar size={16} className="text-purple-400" />
+                      <span>2022 - 2026</span>
+                    </div>
             <a
               href="/resume.pdf"
               target="_blank"

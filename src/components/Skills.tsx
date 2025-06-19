@@ -1,11 +1,11 @@
 
-import { Layout, Server, Database, Brain } from 'lucide-react';
+import { Server, Database, Monitor, Cpu } from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
     {
       category: 'Frontend Development',
-      icon: <Layout className="w-6 h-6 text-purple-400" />,
+      icon: <Monitor className="text-purple-400" size={24} />,
       skills: [
         'HTML',
         'CSS', 
@@ -15,7 +15,7 @@ export default function Skills() {
     },
     {
       category: 'Backend Development',
-      icon: <Server className="w-6 h-6 text-purple-400" />,
+      icon: <Server className="text-purple-400" size={24} />,
       skills: [
         'Node.js',
         'Python',
@@ -25,7 +25,7 @@ export default function Skills() {
     },
     {
       category: 'Database',
-      icon: <Database className="w-6 h-6 text-purple-400" />,
+      icon: <Database className="text-purple-400" size={24} />,
       skills: [
         'MongoDB',
         'MySQL'
@@ -33,7 +33,7 @@ export default function Skills() {
     },
     {
       category: 'Core CS',
-      icon: <Brain className="w-6 h-6 text-purple-400" />,
+      icon: <Cpu className="text-purple-400" size={24} />,
       skills: [
         'DSA',
         'OOP',
